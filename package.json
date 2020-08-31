@@ -2,12 +2,12 @@
   "name": "electro-next-ts",
   "version": "0.1.0",
   "description": "A electron project using NextJS and Typescript",
-  "main": "./dist/main.js",
+  "main": "./dist/index.js",
   "scripts": {
     "build": "tsc && npm run start:next",
     "start:next": "next renderer",
-    "start": "npm run build && electron ./dist/main.js",
-    "start:electron": "tsc && electron ./dist/main.js"
+    "start": "npm run build && electron ./dist/index.js",
+    "start:electron": "tsc && electron ./dist/index.js"
   },
   "keywords": [
     "javascript",
@@ -19,7 +19,9 @@
   "author": "Luis Locon <luis.locon@gmail.com>",
   "license": "MIT",
   "devDependencies": {
+    "@types/node": "^14.6.2",
     "@types/react": "^16.9.48",
+    "@types/react-dom": "^16.9.8",
     "electron": "^10.1.0",
     "next": "^9.5.2",
     "react": "^16.13.1",
