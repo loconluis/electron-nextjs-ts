@@ -4,19 +4,7 @@ import { createNextDevServer } from "./next-server";
 const initElectronApp = () => {
 
   const createWindow = () => {
-    const win: BrowserWindow = new BrowserWindow({
-      width: 800,
-      height: 600,
-      webPreferences: {
-        nodeIntegration: true,
-      },
-    });
-  
-    // win.loadFile(path.join(__dirname, "../index.html"));
-    win.loadURL(`http://localhost:3000/`);
-    win.webContents.openDevTools();
-  
-    createNextDevServer("renderer", win);
+    createNextDevServer("renderer");
   };
   
   app.whenReady().then(createWindow);

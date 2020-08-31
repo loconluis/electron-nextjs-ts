@@ -2,9 +2,9 @@ import { createServer } from "http";
 import next from "next";
 import { BrowserWindow } from "electron";
 
-const createNextDevServer = (dir: string, win: BrowserWindow) => {
+const createNextDevServer = (dir: string) => {
   const dev = process.env.NODE_ENV !== "production";
-  const app = next({ dev, dir });
+  const app = next({ dev, dir: `./${dir}` });
   const handle = app.getRequestHandler();
 
   app.prepare().then(() => {
@@ -25,8 +25,17 @@ const createNextDevServer = (dir: string, win: BrowserWindow) => {
 
       return handle(req, res);
     }).listen(3000, () => {
-      console.log("what is this", this);
-      console.log("> Ready on http://localhost:3000");
+      let win: BrowserWindow | null = new BrowserWindow({
+        width: 800,
+        height: 600,
+        webPreferences: {
+          nodeIntegration: true,
+        },
+      });
+
+      // win.loadFile(path.join(__dirname, "../index.html"));
+      win.loadURL(`http://localhost:3000`);
+      win.webContents.openDevTools();
 
       win.on("close", () => {
         win = null;
