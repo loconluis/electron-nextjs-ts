@@ -23,13 +23,11 @@
   align-items: center;
   text-align: center;
   border-left: 1px solid $black-color-medium;
+  cursor: pointer;
 }
 
 .header-menu__rigth-button {
-  cursor: pointer;
-  scale: 1.5;
   color: lighten($black-color, 70%);
-
   &:hover {
     color: white;
   }

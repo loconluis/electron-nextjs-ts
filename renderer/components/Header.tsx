@@ -15,13 +15,13 @@ const Header: React.FC<HeaderProps> = ({ title, showHome }: HeaderProps) => {
         <h1>{`${title || "Pomodoro"}`}</h1>
       </div>
       {showHome ? (
-        <Link prefetch href="/">
+        <Link href="/">
           <div className="header-menu__rigth">
             <RiHome2Fill className="header-menu__rigth-button" size={30} />
           </div>
         </Link>
       ) : (
-        <Link prefetch href="/settings">
+        <Link href="/settings">
           <div className="header-menu__rigth">
             <GoSettings className="header-menu__rigth-button" size={30} />
           </div>
