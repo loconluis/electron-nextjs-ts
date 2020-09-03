@@ -1,0 +1,20 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;600;800&display=swap');
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+}
+html {
+  font-size: 62.5%; // to convert html px to 10
+  height: 100vh;
+}
+
+body {
+  // Work Sans", -apple-system, ".SFNSText-Regular", "San Francisco", "Roboto"
+  // Work Sans', sans-serif
+  margin: 0;
+  font-family: $primary-font, $secondary-font, $third-font, sans-serif;
+  font-size: $font-size-medium;
+  line-height: 1.6;
+  height: 100%;
+}

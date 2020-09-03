@@ -1,5 +1,11 @@
+const path = require("path");
+
 module.exports = {
-  webpack: (config) => Object.assign(config, {
-    target: 'electron-renderer',
-  }),
+  sassOptions: {
+    includePaths: [path.join(__dirname, "styles")],
+  },
+  webpack: (config) =>
+    Object.assign(config, {
+      target: "electron-renderer",
+    }),
 };

@@ -1,0 +1,17 @@
+.footer {
+  height: 50px;
+  background-color: $black-color;
+  text-align: center;
+  align-items: center;
+  display: flex;
+  color: $pink-color;
+  justify-content: center;
+  p {
+    font-size: $font-size-small / 2;
+  }
+}
+
+.footer-link {
+  cursor: pointer;
+  color: white;
+}

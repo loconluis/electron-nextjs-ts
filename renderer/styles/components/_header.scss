@@ -1,0 +1,24 @@
+.header-menu {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  background-color:$black-color;
+  color: white;
+  height: 50px;
+}
+.header-menu__center {
+  h1 {
+    padding-left: 15px;
+    font-weight: 600;
+    font-size: $font-size-small;
+  }
+}
+.header-menu__rigth {
+  width: 15%;
+  height: 50px;
+  align-content: center;
+  align-items: center;
+  text-align: center;
+  border-left: 1px solid $dark-grey;
+}
