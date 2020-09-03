@@ -1,17 +1,39 @@
 import React from "react";
+import Link from "next/link";
 import { GoSettings } from "react-icons/go";
+import { RiHome2Fill } from "react-icons/ri";
 
-const Header: React.FC = () => {
+interface HeaderProps {
+  title?: string;
+  showHome?: boolean;
+}
+
+const Header: React.FC<HeaderProps> = ({ title, showHome }: HeaderProps) => {
   return (
     <div className="header-menu">
       <div className="header-menu__center">
-        <h1>Pomodoro</h1>
+        <h1>{`${title || "Pomodoro"}`}</h1>
       </div>
-      <div className="header-menu__rigth">
-        <GoSettings className="header-menu__rigth-button" size={30}/>
-      </div>
+      {showHome ? (
+        <Link prefetch href="/">
+          <div className="header-menu__rigth">
+            <RiHome2Fill className="header-menu__rigth-button" size={30} />
+          </div>
+        </Link>
+      ) : (
+        <Link prefetch href="/settings">
+          <div className="header-menu__rigth">
+            <GoSettings className="header-menu__rigth-button" size={30} />
+          </div>
+        </Link>
+      )}
     </div>
   );
+};
+
+Header.defaultProps = {
+  showHome: false,
+  title: "",
 };
 
 export default Header;

@@ -1,4 +1,8 @@
-.pomo-container {
-  height: 500px; 
+.pomo-container, .settings-container {
+  height: 500px;
   background-color: $black-color-ligth;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
 }

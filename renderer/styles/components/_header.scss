@@ -3,7 +3,7 @@
   flex-direction: row;
   justify-content: space-between;
   align-items: center;
-  background-color:$black-color;
+  background-color: $black-color;
   color: white;
   height: 50px;
   border-bottom: 1px solid $black-color-medium;
@@ -28,4 +28,9 @@
 .header-menu__rigth-button {
   cursor: pointer;
   scale: 1.5;
+  color: lighten($black-color, 70%);
+
+  &:hover {
+    color: white;
+  }
 }

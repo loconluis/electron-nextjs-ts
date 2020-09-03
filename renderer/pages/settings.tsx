@@ -1,7 +1,8 @@
 import React from "react";
+import Settings from "../components/Settings";
 
-const Settings: React.FC = () => {
-  return <div></div>;
+const SettingsPage: React.FC = () => {
+  return <Settings />;
 };
 
 export default Settings;
