@@ -9,9 +9,14 @@
   p {
     font-size: $font-size-small / 2;
   }
+  box-shadow: -10px 0px 61px -24px rgba(0, 0, 0, 0.75);
+  border-top: 1px solid $black-color-medium;
 }
 
 .footer-link {
   cursor: pointer;
   color: white;
+  &:hover {
+    text-decoration: underline;
+  }
 }

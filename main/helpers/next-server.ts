@@ -31,6 +31,9 @@ const createNextDevServer = (dir: string) => {
         webPreferences: {
           nodeIntegration: true,
         },
+        resizable: false,
+        frame: false,
+        backgroundColor: '#111'
       });
 
       // win.loadFile(path.join(__dirname, "../index.html"));

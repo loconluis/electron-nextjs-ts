@@ -1,14 +1,17 @@
-import React from 'react'
+import React from "react";
+import { GoSettings } from "react-icons/go";
 
-export default function Header() {
+const Header: React.FC = () => {
   return (
     <div className="header-menu">
       <div className="header-menu__center">
-          <h1>Pomodoro</h1>
+        <h1>Pomodoro</h1>
       </div>
       <div className="header-menu__rigth">
-        X
+        <GoSettings className="header-menu__rigth-button" size={30}/>
       </div>
     </div>
-  )
-}
+  );
+};
+
+export default Header;

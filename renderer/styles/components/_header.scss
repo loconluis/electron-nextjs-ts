@@ -6,6 +6,8 @@
   background-color:$black-color;
   color: white;
   height: 50px;
+  border-bottom: 1px solid $black-color-medium;
+  box-shadow: -10px 0px 61px -24px rgba(0, 0, 0, 0.75);
 }
 .header-menu__center {
   h1 {
@@ -20,5 +22,10 @@
   align-content: center;
   align-items: center;
   text-align: center;
-  border-left: 1px solid $dark-grey;
+  border-left: 1px solid $black-color-medium;
+}
+
+.header-menu__rigth-button {
+  cursor: pointer;
+  scale: 1.5;
 }
