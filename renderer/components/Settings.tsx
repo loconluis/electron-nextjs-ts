@@ -4,7 +4,7 @@ import ListSettings from "./ListSettings";
 
 export default function Settings() {
   return (
-    <Layout title="Settings" showHome>
+    <Layout title="Task List" showHome>
       <ListSettings />
     </Layout>
   );
